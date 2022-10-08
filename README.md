@@ -32,4 +32,4 @@ And performs provisioning:
 
 * [master.sh](master.sh) creates replication user on `db-master` and enables replication;
 * [slave.sh](slave.sh) enables slave replication on `db-slave`, connects to `db-master` and creates test table;
-* The last step is to check the replication. [slave.sh](slave.sh) executes SELECT from master table. 
+* The last step is to check the replication. [slave.sh](slave.sh) executes SELECT from a table, created on `db-master`. 
