@@ -4,7 +4,7 @@
 DBHOST=%
 DBNAME=TESTBASE
 DBUSER=user
-DBPASSWD=tustan
+DBPASSWD=securityfirst
 
 #  prepare installation
 if [ ! -f /var/log/setup_done ]

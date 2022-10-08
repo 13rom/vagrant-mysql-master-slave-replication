@@ -3,11 +3,11 @@
 # initialize variables
 DBNAME=TESTBASE
 MASTERHOST=192.168.56.11
-DBPASSWD=tustan
+DBPASSWD=securityfirst
 
 # replication user
 RUSER=replicator
-RPASSWD=tustan
+RPASSWD=securityfirst
 
 # copy mysql config
 cp /vagrant/50-master.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
