@@ -15,9 +15,11 @@ cp /vagrant/50-master.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 sudo service mysql restart
 
 # create replication user and grant access
-mysql -uroot -p$DBPASSWD -e "CREATE USER '$RUSER'@'$DBHOST' IDENTIFIED BY '$RPASSWD';"
-mysql -uroot -p$DBPASSWD -e "GRANT REPLICATION SLAVE ON *.* TO '$RUSER'@'$DBHOST';"
-mysql -uroot -p$DBPASSWD -e "FLUSH PRIVILEGES;"
+mysql -uroot -p$DBPASSWD << EOF
+CREATE USER '$RUSER'@'$DBHOST' IDENTIFIED BY '$RPASSWD';
+GRANT REPLICATION SLAVE ON *.* TO '$RUSER'@'$DBHOST';
+FLUSH PRIVILEGES;
+EOF
 
 sudo service mysql restart
 
